@@ -8,9 +8,12 @@ export const StyledIcon = styled(FaTrashCan)`
 `;
 
 export const List = styled.ul`
+  width: 50%;
   list-style-type: none;
+  display: flex;
+  flex-direction: column;
   padding: 0;
-  margin: 0;
+  margin: 30px auto;
 `;
 
 export const ListItem = styled.li`

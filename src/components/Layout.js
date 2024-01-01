@@ -3,16 +3,17 @@ import { Toaster } from 'react-hot-toast';
 import { AppBar } from './AppBar/AppBar';
 import { Suspense } from 'react';
 import { GlobalStyle } from './GlobalStyle';
+import { Box } from '@chakra-ui/react'
 
 export const Layout = () => {
   return (
-    <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 16px' }}>
+    <Box w='100%' h={1400} p={5} color='#161414'>
       <AppBar />
       <Suspense fallback={null}>
         <Outlet />
       </Suspense>
       <GlobalStyle />
       <Toaster position="top-right" reverseOrder={false} />
-    </div>
+    </Box>
   );
 };
