@@ -15,7 +15,7 @@ export const ContactList = () => {
 
   return (
     <>
-      <Heading as='h4' size='md'>Your contacts</Heading>
+      <Heading as='h2' size='md'>Your contacts</Heading>
       <List>
       {visibleContacts.map(({ id, name, number }) => {
         return (

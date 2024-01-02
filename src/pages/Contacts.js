@@ -11,6 +11,7 @@ import { fetchContacts } from 'services/fetchContacts';
 import { ContactForm } from 'components/ContactForm/ContactForm';
 import { Container } from '@chakra-ui/react';
 import { Filter } from 'components/Filter/Filter';
+import { Loader } from 'components/Loader/Loader';
 
 export default function Contacts() {
   const dispatch = useDispatch();
@@ -23,9 +24,8 @@ export default function Contacts() {
   }, [dispatch]);
 
   return (
-    <Container maxW="xl" bg='blue.400'>
-      <title>Your contacts</title>
-      <div>{isLoading && 'Request in progress...'}</div>
+    <Container maxW='md' borderRadius='md'>
+      {isLoading && <Loader/>}
       <ContactForm />
       <Filter />
       {error ? <p>error</p> : <ContactList />}

@@ -1,14 +1,15 @@
 import styled from 'styled-components';
-import { FaTrashCan } from 'react-icons/fa6';
-export const StyledIcon = styled(FaTrashCan)`
-  color: #f5904d;
+// import { FaTrashCan } from 'react-icons/fa6';
+import { FaTrash } from "react-icons/fa6";
+export const StyledIcon = styled(FaTrash)`
+  color: #1C56C3;
   &:hover {
-    color: #f8731c;
+    color: #0E45AB ;
   }
 `;
 
 export const List = styled.ul`
-  width: 100%;
+  width: 90%;
   list-style-type: none;
   display: flex;
   flex-direction: column;
@@ -18,11 +19,11 @@ export const List = styled.ul`
 
 export const ListItem = styled.li`
   margin-bottom: 10px;
-  padding: 10px;
+  padding: 14px;
   box-shadow: rgb(0 0 0 / 20%) 0px 3px 3px -2px,
     rgb(0 0 0 / 14%) 0px 3px 4px 0px, rgb(0 0 0 / 12%) 0px 1px 8px 0px;
   border-radius: 4px;
-  background-color: rgb(254, 236, 224);
+  background-color: #C4D2EE ;
   display: flex;
   justify-content: space-between;
   align-items: center;

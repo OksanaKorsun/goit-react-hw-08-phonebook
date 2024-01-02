@@ -45,7 +45,7 @@ export const ContactForm = () => {
   };
   return (
     <>
-      <Heading as='h3' size='lg'>Add contact</Heading>
+      <Heading as='h1' size='md'>Add contact</Heading>
       <Formik
         initialValues={{
           name: '',
@@ -60,7 +60,7 @@ export const ContactForm = () => {
         <Form>
           <StyledLabel htmlFor="name">
             Name:
-            <Field name="name" />
+            <Field name="name"/>
             <ErrorMessage name="name" component="span" />
           </StyledLabel>
 

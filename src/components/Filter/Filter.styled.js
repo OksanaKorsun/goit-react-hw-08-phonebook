@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 
 export const FilterInput = styled.input`
-  width: 100%;
+display: block;
+  width: 90%;
   font-size: 16px;
-  border: 1px solid #f5904d;
+  border: 1px solid #1C56C3;
   border-radius: 4px;
   outline: none;
-  padding: 8px;
-  margin-bottom: 12px;
+  padding: 14px;
+  margin: 20px auto;
 `;
