@@ -14,14 +14,14 @@ export const AuthNav = () => {
     <Breadcrumb spacing="8px">
       <BreadcrumbItem>
         <BreadcrumbLink href="/goit-react-hw-08-phonebook/register">
-          <Text fontSize='20px'>Register</Text>
+          <Text fontSize='18px'>Register</Text>
           
         </BreadcrumbLink>
       </BreadcrumbItem>
 
       <BreadcrumbItem>
         <BreadcrumbLink href="/goit-react-hw-08-phonebook/login">
-           <Text fontSize='20px'>Log in</Text>
+           <Text fontSize='18px'>Log in</Text>
         </BreadcrumbLink>
       </BreadcrumbItem>
     </Breadcrumb>

@@ -1,3 +1,4 @@
+import { Text } from '@chakra-ui/react';
 import { setFilter } from '../../redux/filterSlice';
 import { selectFilter } from '../../redux/selectors';
 import { FilterInput } from './Filter.styled';
@@ -8,7 +9,7 @@ export const Filter = () => {
   const filter = useSelector(selectFilter);
   return (
     <>
-      <p>Find contacts by name</p>
+      <Text fontSize='18px'>Find contacts by name</Text>
       <FilterInput
         type="text"
         name="filter"

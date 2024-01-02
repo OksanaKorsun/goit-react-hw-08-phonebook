@@ -8,7 +8,7 @@ export const StyledIcon = styled(FaTrashCan)`
 `;
 
 export const List = styled.ul`
-  width: 50%;
+  width: 100%;
   list-style-type: none;
   display: flex;
   flex-direction: column;

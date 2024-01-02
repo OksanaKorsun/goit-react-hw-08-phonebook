@@ -8,12 +8,15 @@ import { selectVisibleContacts } from '../../redux/selectors';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteContact } from 'services/fetchContacts';
 import { StyledIcon } from './ContactList.styled';
+import { Heading } from '@chakra-ui/react';
 export const ContactList = () => {
   const dispatch = useDispatch();
   const visibleContacts = useSelector(selectVisibleContacts);
 
   return (
-    <List>
+    <>
+      <Heading as='h4' size='md'>Your contacts</Heading>
+      <List>
       {visibleContacts.map(({ id, name, number }) => {
         return (
           <ListItem key={id}>
@@ -27,5 +30,6 @@ export const ContactList = () => {
         );
       })}
     </List>
+    </>
   );
 };

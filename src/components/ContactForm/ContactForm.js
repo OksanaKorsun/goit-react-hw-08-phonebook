@@ -11,6 +11,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts } from '../../redux/selectors';
 import { addContact } from 'services/fetchContacts';
 import * as Yup from 'yup';
+import { Heading } from '@chakra-ui/react'
 const contactSchema = Yup.object().shape({
   name: Yup.string()
     .min(3, 'Too Short!')
@@ -43,7 +44,8 @@ export const ContactForm = () => {
     dispatch(addContact(values));
   };
   return (
-    <div>
+    <>
+      <Heading as='h3' size='lg'>Add contact</Heading>
       <Formik
         initialValues={{
           name: '',
@@ -71,6 +73,6 @@ export const ContactForm = () => {
           <FormButton type="submit">Add contact</FormButton>
         </Form>
       </Formik>
-    </div>
+    </>
   );
 };

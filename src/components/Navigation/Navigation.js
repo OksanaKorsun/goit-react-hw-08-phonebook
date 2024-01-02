@@ -7,6 +7,7 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
   Text,
+  Flex,
 } from '@chakra-ui/react';
 
 export const Navigation = () => {
@@ -22,20 +23,22 @@ export const Navigation = () => {
     //     </NavLink>
     //   )}
     // </nav>
-    <Breadcrumb spacing="8px">
-      <BreadcrumbItem>
-        <BreadcrumbLink href="/goit-react-hw-08-phonebook/">
-          <Text fontSize="20px">Home</Text>
-        </BreadcrumbLink>
-      </BreadcrumbItem>
-
-      {isLoggedIn && (
+    <Flex minWidth="max-content" alignItems="center">
+      <Breadcrumb spacing="8px">
         <BreadcrumbItem>
-          <BreadcrumbLink href="/goit-react-hw-08-phonebook/contacts">
-            <Text fontSize='20px'>Contacts</Text>
+          <BreadcrumbLink href="/goit-react-hw-08-phonebook/">
+            <Text fontSize="18px">Home</Text>
           </BreadcrumbLink>
         </BreadcrumbItem>
-      )}
-    </Breadcrumb>
+
+        {isLoggedIn && (
+          <BreadcrumbItem>
+            <BreadcrumbLink href="/goit-react-hw-08-phonebook/contacts">
+              <Text fontSize="18px">Contacts</Text>
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+        )}
+      </Breadcrumb>
+    </Flex>
   );
 };
