@@ -7,6 +7,6 @@ display: block;
   border: 1px solid #1C56C3;
   border-radius: 4px;
   outline: none;
-  padding: 14px;
+  padding: 12px;
   margin: 20px auto;
 `;

@@ -30,14 +30,14 @@ export const Field = styled(FormikField)`
   border: 1px solid #1C56C3;
   border-radius: 4px;
   outline: none;
-  padding: 14px;
+  padding: 12px;
 `;
 
 export const FormButton = styled.button`
   background-color: #1C56C3;
   color: #fff;
   border: none;
-  padding: 14px 20px;
+  padding: 12px 20px;
   font-size: 16px;
   border-radius: 4px;
   cursor: pointer;

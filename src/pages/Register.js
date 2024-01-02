@@ -4,13 +4,7 @@ import { RegisterForm } from 'components/RegisterForm/RegisterForm';
 
 export default function Register() {
   return (
-    // <div>
-    //   <Helmet>
-    //     <title>Registration</title>
-    //   </Helmet>
-    //  
-    // </div>
-    <Container maxW="md" borderRadius="md" textAlign="center">
+    <Container maxW="md" borderRadius="md" textAlign="center" mt="4">
       <Heading as='h2' size='md'>Registration</Heading>
        <RegisterForm />
     </Container>

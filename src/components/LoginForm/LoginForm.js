@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { logIn } from 'services/fetchAuth';
-import { Form, Label, Field, Button} from './LoginForm.styled';
+import { Form, Field, Button} from './LoginForm.styled';
 
 export const LoginForm = () => {
   const dispatch = useDispatch();
@@ -34,26 +34,26 @@ export const LoginForm = () => {
 
   return (
     <Form onSubmit={handleSubmit} autoComplete="off">
-      <Label>
-        Email
+      
         <Field
           type="email"
           name="email"
           value={email}
           onChange={handleChange}
           required
+          placeholder='Email:'
         />
-      </Label>
-      <Label>
-        Password
+      
+      
         <Field
           type="password"
           name="password"
           value={password}
           onChange={handleChange}
           required
+          placeholder='Password:'
         />
-      </Label>
+     
       <Button type="submit">Log In</Button>
     </Form>
   );

@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { register } from '../../services/fetchAuth';
 import { useState } from 'react';
-import { Form, Label, Field, Button} from '../LoginForm/LoginForm.styled';
+import { Form, Field, Button } from '../LoginForm/LoginForm.styled';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -40,36 +40,33 @@ export const RegisterForm = () => {
 
   return (
     <Form onSubmit={handleSubmit} autoComplete="off">
-      <Label>
-        Username
-        <Field
-          type="text"
-          name="name"
-          value={name}
-          onChange={handleChange}
-          required
-        />
-      </Label>
-      <Label>
-        Email
-        <Field
-          type="email"
-          name="email"
-          value={email}
-          onChange={handleChange}
-          required
-        />
-      </Label>
-      <Label>
-        Password
-        <Field
-          type="password"
-          name="password"
-          value={password}
-          onChange={handleChange}
-          required
-        />
-      </Label>
+      <Field
+        type="text"
+        name="name"
+        value={name}
+        onChange={handleChange}
+        required
+        placeholder="Username:"
+      />
+
+      <Field
+        type="email"
+        name="email"
+        value={email}
+        onChange={handleChange}
+        required
+        placeholder="Email"
+      />
+
+      <Field
+        type="password"
+        name="password"
+        value={password}
+        onChange={handleChange}
+        required
+        placeholder="Password:"
+      />
+
       <Button type="submit">Register</Button>
     </Form>
   );
