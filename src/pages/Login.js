@@ -1,13 +1,11 @@
-import { Helmet } from 'react-helmet';
+import { Container, Heading } from '@chakra-ui/react';
 import { LoginForm } from 'components/LoginForm/LoginForm';
 
 export default function Login() {
   return (
-    <div>
-      <Helmet>
-        <title>Login</title>
-      </Helmet>
+    <Container maxW="md" borderRadius="md" textAlign="center" mt="4">
+      <Heading as='h2' size='md'>Login</Heading>
       <LoginForm />
-    </div>
+    </Container>
   );
 }

@@ -24,7 +24,7 @@ export default function Contacts() {
   }, [dispatch]);
 
   return (
-    <Container maxW='md' borderRadius='md'>
+    <Container maxW='md' borderRadius='md' textAlign="center" p="4">
       {isLoading && <Loader/>}
       <ContactForm />
       <Filter />
