@@ -7,6 +7,7 @@ import { Layout } from './Layout';
 import { RestrictedRoute } from './RestrictedRoute';
 import { PrivateRoute } from './PrivateRoute';
 import { selectIsRefreshing } from '../redux/selectors';
+import { Loader } from './Loader/Loader';
 const HomePage = lazy(() => import('../pages/Home'));
 const RegisterPage = lazy(() => import('../pages/Register'));
 const LoginPage = lazy(() => import('../pages/Login'));
@@ -20,7 +21,7 @@ export const App = () => {
     dispatch(refreshUser());
   }, [dispatch]);
   return isRefreshing ? (
-    <b>Refreshing user...</b>
+    <div><Loader/></div>
   ) : (
     <Routes>
       <Route path="/" element={<Layout />}>

@@ -1,5 +1,5 @@
 // import { NavLink } from 'react-router-dom';
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from '@chakra-ui/react';
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, Text} from '@chakra-ui/react';
 
 export const AuthNav = () => {
   return (
@@ -14,13 +14,14 @@ export const AuthNav = () => {
     <Breadcrumb spacing="8px">
       <BreadcrumbItem>
         <BreadcrumbLink href="/goit-react-hw-08-phonebook/register">
-          Register
+          <Text fontSize='20px'>Register</Text>
+          
         </BreadcrumbLink>
       </BreadcrumbItem>
 
       <BreadcrumbItem>
         <BreadcrumbLink href="/goit-react-hw-08-phonebook/login">
-          Log in
+           <Text fontSize='20px'>Log in</Text>
         </BreadcrumbLink>
       </BreadcrumbItem>
     </Breadcrumb>

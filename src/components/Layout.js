@@ -7,7 +7,7 @@ import { Box } from '@chakra-ui/react'
 
 export const Layout = () => {
   return (
-    <Box w='100%' h={1400} p={5} color='#161414'>
+    <Box w='100%'color='#161414'>
       <AppBar />
       <Suspense fallback={null}>
         <Outlet />

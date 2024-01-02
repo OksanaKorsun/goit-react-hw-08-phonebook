@@ -2,7 +2,12 @@
 
 import { useSelector } from 'react-redux';
 import { selectIsLoggedIn } from '../../redux/selectors';
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from '@chakra-ui/react';
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  Text,
+} from '@chakra-ui/react';
 
 export const Navigation = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
@@ -20,14 +25,14 @@ export const Navigation = () => {
     <Breadcrumb spacing="8px">
       <BreadcrumbItem>
         <BreadcrumbLink href="/goit-react-hw-08-phonebook/">
-          Home
+          <Text fontSize="20px">Home</Text>
         </BreadcrumbLink>
       </BreadcrumbItem>
 
       {isLoggedIn && (
         <BreadcrumbItem>
           <BreadcrumbLink href="/goit-react-hw-08-phonebook/contacts">
-            Contacts
+            <Text fontSize='20px'>Contacts</Text>
           </BreadcrumbLink>
         </BreadcrumbItem>
       )}

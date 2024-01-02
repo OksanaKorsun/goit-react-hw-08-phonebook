@@ -1,4 +1,5 @@
 // import { Formik, Form, Field} from 'formik';
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { logIn } from 'services/fetchAuth';
 // import {
@@ -23,7 +24,22 @@ import { logIn } from 'services/fetchAuth';
 
 export const LoginForm = () => {
   const dispatch = useDispatch();
-
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const handleChange = e => {
+    const { name, value } = e.target;
+    switch (name) {
+      case 'email':
+        setEmail(value);
+        break;
+      case 'password':
+        setPassword(value);
+        break;
+      default:
+        break;
+    }
+    
+}
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.currentTarget;
@@ -40,11 +56,11 @@ export const LoginForm = () => {
     <form onSubmit={handleSubmit} autoComplete="off">
       <label>
         Email
-        <input type="email" name="email" />
+        <input type="email" name="email" value={email} onChange={handleChange} required/>
       </label>
       <label>
         Password
-        <input type="password" name="password" />
+        <input type="password" name="password" value={password } onChange={handleChange} required/>
       </label>
       <button type="submit">Log In</button>
     </form>
