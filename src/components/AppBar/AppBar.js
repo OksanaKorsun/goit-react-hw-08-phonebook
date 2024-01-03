@@ -9,10 +9,12 @@ export const AppBar = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
 
   return (
-    <Flex bg="#1C56C3" w="100%" p={4} color="white">
-      <Navigation />
-      <Spacer />
-      {isLoggedIn ? <UserMenu /> : <AuthNav />}
-    </Flex>
+    <header>
+      <Flex bg="#1C56C3" w="100%" p={4} pl={10} pr={10} color="white">
+        <Navigation />
+        <Spacer />
+        {isLoggedIn ? <UserMenu /> : <AuthNav />}
+      </Flex>
+    </header>
   );
 };

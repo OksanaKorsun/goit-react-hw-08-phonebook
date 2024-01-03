@@ -1,7 +1,8 @@
 import axios from 'axios';
+import { Notify } from 'notiflix';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-axios.defaults.baseURL = 'https://connections-api.herokuapp.com/';
+axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
 
 // Utility to add JWT
 const setAuthHeader = token => {
@@ -26,6 +27,7 @@ export const register = createAsyncThunk(
       setAuthHeader(responce.data.token);
       return responce.data;
     } catch (error) {
+      Notify.failure(`We're sorry, something went wrong`);
       return thunkAPI.rejectWithValue(error.message);
     }
   }
@@ -44,6 +46,7 @@ export const logIn = createAsyncThunk(
       setAuthHeader(res.data.token);
       return res.data;
     } catch (error) {
+      Notify.failure(`You entered an incorrect login or password`);
       return thunkAPI.rejectWithValue(error.message);
     }
   }

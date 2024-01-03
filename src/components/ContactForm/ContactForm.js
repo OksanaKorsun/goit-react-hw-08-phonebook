@@ -11,7 +11,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts } from '../../redux/selectors';
 import { addContact } from 'services/fetchContacts';
 import * as Yup from 'yup';
-import { Heading } from '@chakra-ui/react'
+import { Heading } from '@chakra-ui/react';
 const contactSchema = Yup.object().shape({
   name: Yup.string()
     .min(3, 'Too Short!')
@@ -20,7 +20,7 @@ const contactSchema = Yup.object().shape({
   number: Yup.number()
     .integer('Must be an integer')
     .min(1000000, 'Must be at least 7 digits')
-    // .max(9999999, 'Must be at most 7 digits')
+    .max(9999999, 'Must be at most 7 digits')
     .required('Required'),
 });
 
@@ -45,7 +45,9 @@ export const ContactForm = () => {
   };
   return (
     <>
-      <Heading as='h1' size='md'>Add contact</Heading>
+      <Heading as="h1" size="md">
+        Add contact
+      </Heading>
       <Formik
         initialValues={{
           name: '',
@@ -60,7 +62,7 @@ export const ContactForm = () => {
         <Form>
           <StyledLabel htmlFor="name">
             Name:
-            <Field name="name"/>
+            <Field name="name" />
             <ErrorMessage name="name" component="span" />
           </StyledLabel>
 

@@ -14,16 +14,13 @@ const styles = {
     textAlign: 'center',
   },
 };
-
 export default function Home() {
   const user = useSelector(selectUser);
   const isLoggedin = useSelector(selectIsLoggedIn);
   return (
     <div style={styles.container}>
       {isLoggedin ? (
-        <h1 style={styles.title}>
-          Hello, {user.name}! Wellcome to your phoneBook.
-        </h1>
+        <h1 style={styles.title}>Hello, {user.name}! Wellcome to your phoneBook.</h1>
       ) : (
         <h1 style={styles.title}>Hello! I'm your phonebook.</h1>
       )}

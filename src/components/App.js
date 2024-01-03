@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, lazy } from 'react';
-// import { Loader } from './Loader/Loader';
+
 import { refreshUser } from 'services/fetchAuth';
 import { Route, Routes } from 'react-router-dom';
 import { Layout } from './Layout';
@@ -12,7 +12,6 @@ const HomePage = lazy(() => import('../pages/Home'));
 const RegisterPage = lazy(() => import('../pages/Register'));
 const LoginPage = lazy(() => import('../pages/Login'));
 const ContactsPage = lazy(() => import('../pages/Contacts'));
-const NotFoundPage = lazy(() => import('../pages/NotFound'))
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -22,7 +21,9 @@ export const App = () => {
     dispatch(refreshUser());
   }, [dispatch]);
   return isRefreshing ? (
-    <div><Loader/></div>
+    <div>
+      <Loader />
+    </div>
   ) : (
     <Routes>
       <Route path="/" element={<Layout />}>
@@ -51,7 +52,7 @@ export const App = () => {
         <Route
           path="*"
           element={
-            <PrivateRoute redirectTo="/login" component={<NotFoundPage />} />
+            <PrivateRoute redirectTo="/login" component={<HomePage />} />
           }
         />
       </Route>
