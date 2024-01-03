@@ -20,7 +20,9 @@ export default function Home() {
   return (
     <div style={styles.container}>
       {isLoggedin ? (
-        <h1 style={styles.title}>Hello, {user.name}! Wellcome to your phoneBook.</h1>
+        <h1 style={styles.title}>
+          Hello, {user.name}! Wellcome to your phoneBook.
+        </h1>
       ) : (
         <h1 style={styles.title}>Hello! I'm your phonebook.</h1>
       )}

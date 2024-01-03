@@ -33,7 +33,7 @@ export const ContactForm = () => {
     );
 
     if (checkContact) {
-      Notify.warning(`${values.name} is already in contacts.`, {
+      Notify.failure(`${values.name} is already in contacts.`, {
         width: '400px',
         position: 'center-center',
         timeout: 2000,
